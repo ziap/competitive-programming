@@ -7,7 +7,7 @@ This is also where I dump all my solutions.
 ## Compiling
 
 You will need:
-- A C++11 compiler
+- A C++14 compiler
 - GNU make
 
 ```

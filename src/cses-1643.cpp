@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-typedef int64_t i64;
+using i64 = int64_t;
 
 int main(void) {
   i64 n;

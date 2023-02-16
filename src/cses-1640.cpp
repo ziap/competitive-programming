@@ -18,5 +18,4 @@ int main(void) {
   }
 
   std::cout << "IMPOSSIBLE\n";
-  return 0;
 }
