@@ -4,12 +4,17 @@ int main(void) {
   int n;
   std::cin >> n;
 
-  std::unordered_set<int> s;
-  for (int i = 0; i < n; ++i) {
-    int x;
-    std::cin >> x;
-    s.insert(x);
+  int a[n];
+  for (int &i : a) {
+    std::cin >> i;
+  }
+  std::sort(a, a + n);
+
+  int res = 1;
+  for (int i = 1; i < n; ++i) {
+    if (a[i] != a[i - 1])
+      res++;
   }
 
-  std::cout << s.size() << '\n';
+  std::cout << res << '\n';
 }
