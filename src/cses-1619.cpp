@@ -4,7 +4,7 @@ int main(void) {
   int n;
   std::cin >> n;
 
-  auto a = new std::pair<int, bool>[2 * n];
+  std::pair<int, bool> a[2 * n];
 
   for (int i = 0; i < n; ++i) {
     std::cin >> a[2 * i + 0].first;
@@ -19,8 +19,8 @@ int main(void) {
   int ans = 0;
   int max = 0;
 
-  for (int i = 0; i < 2 * n; ++i) {
-    if (a[i].second) {
+  for (auto i : a) {
+    if (i.second) {
       ans++;
       max = std::max(max, ans);
     } else {
@@ -29,6 +29,4 @@ int main(void) {
   }
 
   std::cout << max << '\n';
-
-  delete[] a;
 }

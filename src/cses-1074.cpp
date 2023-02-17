@@ -6,10 +6,9 @@ int main(void) {
   i64 n;
   std::cin >> n;
 
-  i64 *p = new i64[n];
-
-  for (i64 i = 0; i < n; ++i) {
-    std::cin >> p[i];
+  i64 p[n];
+  for (i64 &i : p) {
+    std::cin >> i;
   }
 
   std::sort(p, p + n);
@@ -17,11 +16,9 @@ int main(void) {
   i64 t = p[n / 2];
   i64 ans = 0;
 
-  for (i64 i = 0; i < n; ++i) {
-    ans += std::abs(t - p[i]);
+  for (auto i : p) {
+    ans += std::abs(t - i);
   }
 
   std::cout << ans << '\n';
-
-  delete[] p;
 }

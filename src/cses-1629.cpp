@@ -4,10 +4,10 @@ int main(void) {
   int n;
   std::cin >> n;
 
-  auto a = new std::pair<int, int>[n];
+  std::pair<int, int> a[n];
 
-  for (int i = 0; i < n; ++i) {
-    std::cin >> a[i].second >> a[i].first;
+  for (auto &x : a) {
+    std::cin >> x.second >> x.first;
   }
 
   std::sort(a, a + n);
@@ -23,6 +23,4 @@ int main(void) {
   }
 
   std::cout << ans << '\n';
-
-  delete[] a;
 }

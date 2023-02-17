@@ -1,4 +1,4 @@
-CFLAGS=-std=c++14 -Wall -Wextra -pedantic -O3 -s -march=native -mtune=native
+CFLAGS=-std=c++14 -Wall -Wextra -O3 -s -march=native -mtune=native
 
 INPUTS=$(wildcard src/*.cpp)
 OUTPUTS=$(patsubst %.cpp, bin/%, $(notdir $(INPUTS)))

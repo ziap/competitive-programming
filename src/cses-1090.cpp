@@ -4,10 +4,9 @@ int main(void) {
   int n, x;
   std::cin >> n >> x;
 
-  int *p = new int[n];
-
-  for (int i = 0; i < n; ++i) {
-    std::cin >> p[i];
+  int p[n];
+  for (int &i : p) {
+    std::cin >> i;
   }
 
   std::sort(p, p + n);
@@ -31,6 +30,4 @@ int main(void) {
   }
 
   std::cout << ans << '\n';
-
-  delete[] p;
 }
